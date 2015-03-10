@@ -6,6 +6,8 @@ RUN apt-get install -qy git python-pip nodejs npm
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 
 RUN adduser --disabled-password --gecos "" --home /home/strider strider
+RUN mkdir /home/strider/.strider
+RUN chown -R strider:strider /home/strider/.strider
 
 VOLUME /home/strider/.strider
 EXPOSE 3000
