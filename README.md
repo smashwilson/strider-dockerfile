@@ -13,10 +13,10 @@ Note: your IP address may differ. If you are running docker from Linux, it shoul
 
 From here, you have a container running strider, connected to the database you specified.  You should be able to connect to it with your web browser.  Hint: Remember if you are using boot2docker that you must connect to your Linux VM's IP address, which can be found with ```boot2docker ip```
 
-Unfortunately, if this is your first time running strider, that database has probably not been seeded with the admin user.  To seed your database, you can do this ugly hack:
+Unfortunately, if this is your first time running strider, that database has probably not been seeded with the admin user.  To seed your database, you can do this:
 
 ```
-$ docker run -i -t -e "DB_URI=mongodb://192.168.59.3/strider" --entrypoint="/bin/bash" strider
+$ docker exec -t -i strider /bin/bash
 strider@9e16ad168acf:~$ node /home/strider/node_modules/.bin/strider addUser
 Connecting to MongoDB URL: mongodb://192.168.59.3/strider
 
