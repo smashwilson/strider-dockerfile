@@ -1,0 +1,11 @@
+---
+mongo:
+  image: mongodb:2.6
+strider:
+  build: .
+  links:
+  - "mongo:mongo"
+  ports:
+  - "3000:3000"
+  environment:
+    DB_URI: "mongodb://mongo/strider"
