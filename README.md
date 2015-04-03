@@ -1,5 +1,7 @@
 # Strider
 
+[![Docker Repository on Quay.io](https://quay.io/repository/deconst/strider/status "Docker Repository on Quay.io")](https://quay.io/repository/deconst/strider)
+
 This is a Dockerfile that launches a StriderCD server configured to easily run page builds. There are other Strider Dockerfiles, but many of them (including the quasi-official one) bundle MongoDB, which feels like overkill.
 
 To build and run this container, you must have access to a MongoDB as mentioned above.  If you have mongod running on your localhost, you can pass in the database string as an environment variable.  Starting from the root directory of this GitHub project:
