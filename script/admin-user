@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Seed Strider with an admin user.
+
+set -euo pipefail
+
+SUDO='sudo'
+which boot2docker >/dev/null 2>&1 && SUDO=''
+
+${SUDO} docker-compose run --rm strider addUser
