@@ -1,6 +1,6 @@
 ---
 mongo:
-  image: mongodb:2.6
+  image: mongo:3.0
 strider:
   build: .
   links:
