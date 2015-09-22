@@ -17,5 +17,6 @@ USER strider
 ENV HOME /home/strider
 RUN pyvenv /home/strider/py3-env
 RUN npm install strider
+COPY override/worker.js /home/strider/node_modules/strider/node_modules/strider-custom/worker.js
 
 ENTRYPOINT ["/home/strider/node_modules/.bin/strider"]
