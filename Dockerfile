@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Ash Wilson <ash.wilson@rackspace.com>
 
 RUN apt-get update
-RUN apt-get install -qy git python-pip nodejs npm python3 python3-venv
+RUN apt-get install -qy git python-pip nodejs npm python3 python3-venv locales
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 
 RUN adduser --disabled-password --gecos "" --home /home/strider strider
